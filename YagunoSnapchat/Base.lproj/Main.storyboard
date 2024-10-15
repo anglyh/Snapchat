@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,7 @@
         <!--Iniciar Sesion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="iniciarSesionViewController" customModule="YagunoSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IniciarSesionViewController" customModule="YagunoSnapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +65,23 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="iniciarSesionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FXZ-51-Bqf"/>
+                                    <action selector="iniciarSesionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h0k-Zc-uax"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXP-V1-4kB">
+                                <rect key="frame" x="95" y="533.66666666666663" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="HhJ-qL-y7f"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Iniciar con Google">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="googleSignInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tpZ-CT-eGI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,7 +91,9 @@
                             <constraint firstItem="enN-vu-0Wh" firstAttribute="top" secondItem="SNM-1L-zqD" secondAttribute="bottom" constant="25" id="0rY-Zj-hpv"/>
                             <constraint firstItem="myV-Of-vYh" firstAttribute="top" secondItem="oDe-rt-SIl" secondAttribute="bottom" constant="25" id="83G-fY-8Zy"/>
                             <constraint firstItem="KZa-Ui-JlS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="97s-9S-mMH"/>
+                            <constraint firstItem="DXP-V1-4kB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BH1-eW-cKI"/>
                             <constraint firstItem="myV-Of-vYh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ewe-hU-ps1"/>
+                            <constraint firstItem="DXP-V1-4kB" firstAttribute="top" secondItem="KZa-Ui-JlS" secondAttribute="bottom" constant="30" id="KfD-P4-Uzv"/>
                             <constraint firstItem="SNM-1L-zqD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PrP-19-Ja3"/>
                             <constraint firstItem="KZa-Ui-JlS" firstAttribute="top" secondItem="myV-Of-vYh" secondAttribute="bottom" constant="30" id="lNT-qj-Bec"/>
                             <constraint firstItem="oDe-rt-SIl" firstAttribute="top" secondItem="iMv-LE-tnX" secondAttribute="bottom" constant="25" id="llB-Sg-1Km"/>
@@ -86,8 +105,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="iMv-LE-tnX" id="eu1-ce-JHQ"/>
-                        <outlet property="passwordTextField" destination="myV-Of-vYh" id="1jR-Fe-iUH"/>
+                        <outlet property="emailTextField" destination="iMv-LE-tnX" id="N8i-ta-wf4"/>
+                        <outlet property="passwordTextField" destination="myV-Of-vYh" id="rCa-qz-nvO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
