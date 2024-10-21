@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B528AA12CBE0158004D1FBC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 0B528AA02CBE0158004D1FBC /* GoogleSignIn */; };
 		0B528AA32CBE0158004D1FBC /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0B528AA22CBE0158004D1FBC /* GoogleSignInSwift */; };
+		0BB27DF52CC6BFE100C50349 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB27DF42CC6BFE100C50349 /* SnapsViewController.swift */; };
 		3B3057842CBDC9A1002527EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3057832CBDC9A1002527EB /* AppDelegate.swift */; };
 		3B3057862CBDC9A1002527EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3057852CBDC9A1002527EB /* SceneDelegate.swift */; };
 		3B3057882CBDC9A1002527EB /* iniciarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3057872CBDC9A1002527EB /* iniciarSesionViewController.swift */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BB27DF32CC6BE3100C50349 /* YagunoSnapchatRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YagunoSnapchatRelease.entitlements; sourceTree = "<group>"; };
+		0BB27DF42CC6BFE100C50349 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		3B3057802CBDC9A1002527EB /* YagunoSnapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YagunoSnapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3057832CBDC9A1002527EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B3057852CBDC9A1002527EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 		3B3057822CBDC9A1002527EB /* YagunoSnapchat */ = {
 			isa = PBXGroup;
 			children = (
+				0BB27DF32CC6BE3100C50349 /* YagunoSnapchatRelease.entitlements */,
 				3B3057972CBDCC6D002527EB /* GoogleService-Info.plist */,
 				3B3057832CBDC9A1002527EB /* AppDelegate.swift */,
 				3B3057852CBDC9A1002527EB /* SceneDelegate.swift */,
@@ -80,6 +84,7 @@
 				3B30578C2CBDC9A2002527EB /* Assets.xcassets */,
 				3B30578E2CBDC9A2002527EB /* LaunchScreen.storyboard */,
 				3B3057912CBDC9A2002527EB /* Info.plist */,
+				0BB27DF42CC6BFE100C50349 /* SnapsViewController.swift */,
 			);
 			path = YagunoSnapchat;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB27DF52CC6BFE100C50349 /* SnapsViewController.swift in Sources */,
 				3B3057882CBDC9A1002527EB /* iniciarSesionViewController.swift in Sources */,
 				3B3057842CBDC9A1002527EB /* AppDelegate.swift in Sources */,
 				3B3057862CBDC9A1002527EB /* SceneDelegate.swift in Sources */,
@@ -343,6 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = YagunoSnapchat/YagunoSnapchatRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

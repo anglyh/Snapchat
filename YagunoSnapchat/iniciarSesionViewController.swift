@@ -24,6 +24,7 @@ class IniciarSesionViewController: UIViewController {
     }
     
     @IBAction func iniciarSesionTapped(_ sender: Any) {
+        /*
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
         
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
@@ -32,6 +33,26 @@ class IniciarSesionViewController: UIViewController {
                 print("Se presentó el siguiente error: \(error.localizedDescription)")
             } else {
                 print("Inicio de sesión exitoso")
+            }
+        }
+        */
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authResult, error in
+            print("Intentando iniciar sesión")
+            if let error = error {
+                print("Se presentó el siguiente error: \(error.localizedDescription)")
+                // Intentar crear un nuevo usuario si el inicio de sesión falla
+                Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { authResult, error in
+                    print("Intentando crear usuario")
+                    if let error = error {
+                        print("Se presentó el siguiente error al crear usuario: \(error.localizedDescription)")
+                    } else {
+                        print("El usuario fue creado exitosamente")
+                        self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
+                    }
+                }
+            } else {
+                print("Inicio de sesión exitoso")
+                self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
             }
         }
     }
